@@ -3,8 +3,10 @@ This tutorial is about how to replace the default Normal World linux rootfs with
 
 So that we can have a more complete development environment in Normal World Linux.
 
+This tutorial was successfully tested with arm64 Debian-18.04 linaro-rootfs aside OP-TEE v3.6.0
+
 ## 1. Compile the OP-TEE raspberry-pi3 version
-I compiled the OP-TEE 3.6.0 rpi3 version.
+Follow the instructions of OP-TEE document: https://optee.readthedocs.io/en/latest/building/devices/rpi3.html#build-instructions
 
 ## 2. Download Linaro Debian-based Rootfs image
 The image can be downloaded from here: https://releases.linaro.org/debian/images/
