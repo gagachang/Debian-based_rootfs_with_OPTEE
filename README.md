@@ -3,15 +3,15 @@ This tutorial is about how to replace the default Normal World linux rootfs with
 
 So that we can have a more complete development environment in Normal World Linux.
 
-# 1. Compile the OP-TEE raspberry-pi3 version
+## 1. Compile the OP-TEE raspberry-pi3 version
 I compiled the OP-TEE 3.6.0 rpi3 version.
 
-# 2. Download Linaro Debian-based Rootfs image
+## 2. Download Linaro Debian-based Rootfs image
 The image can be downloaded from here: https://releases.linaro.org/debian/images/
 
 I choose `developer-arm64/18.04/linaro-stretch-developer-20180416-89.tar.gz` version.
 
-# 3. Decompress the above file
+## 3. Decompress the above file
 ```
 /home$ mkdir linaro-rootfs
 /home$ sudo tar zxvf linaro-stretch-developer-20180416-89.tar.gz -C /home/linaro-rootfs
@@ -19,13 +19,13 @@ I choose `developer-arm64/18.04/linaro-stretch-developer-20180416-89.tar.gz` ver
 
 The contents of linaro-rootfs will be put in `/home/linaro-rootfs/binary/`
 
-# 4. Decompress the kernel module into rootfs
+## 4. Decompress the kernel module into rootfs
 ```
 /home$ cd optee/module_output
      $ sudo find . | sudo cpio -pudm /home/linaro-rootfs/binary
 ```
 
-# 5. Copy the needed file into the new linaro-rootfs
+## 5. Copy the needed file into the new linaro-rootfs
 ```
 /home$ cd optee/out_br/target                                       // Default rootfs by buildroot
      $ cd lib
@@ -39,7 +39,7 @@ The contents of linaro-rootfs will be put in `/home/linaro-rootfs/binary/`
      $ sudo cp tee-supplicant /home/linaro-rootfs/binary/usr/sbin   // tee-supplicant in Linux
 ```
 
-# 6. Partition and format the SD card and put the files into it
+## 6. Partition and format the SD card and put the files into it
 
 Insert the SD card into the computer.
 
@@ -64,4 +64,4 @@ $ sudo cd /media
 $ sudo umount rootfs
 ```
 
-# 7. Enjoy yourself
+## 7. Enjoy yourself
