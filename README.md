@@ -42,7 +42,21 @@ Find the location of that SD card:
 ```
 $ sudo fdisk -l
 ```
-[]()
+![image](https://github.com/gagachang/Ubuntu18.04_FS-with-OPTEE/blob/master/fdisk.jpg)
+
+Then follow the instructions bellow until the yellow line:
 ```
 /home$ cd optee/build
      $ make img-help
+```
+![image](https://github.com/gagachang/Ubuntu18.04_FS-with-OPTEE/blob/master/img-help.jpg)
+
+Copy the new rootfs into `/media/`
+```
+$ sudo cp -r /home/linaro-rootfs/rootfs /media
+$ sudo rm -rf /media/rootfs/boot/*
+$ sudo cd /media
+$ sudo umount rootfs
+```
+
+# 7. Enjoy yourself!
