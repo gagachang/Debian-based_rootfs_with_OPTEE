@@ -1,4 +1,9 @@
-# 1. Compile the OP-TEE raspberry-pi version
+# Intro.
+This tutorial is about how to replace the default Normal World linux rootfs with debian-based linaro-rootfs.
+
+So that we can have a more complete development environment in Normal World Linux.
+
+# 1. Compile the OP-TEE raspberry-pi3 version
 I compiled the OP-TEE 3.6.0 rpi3 version.
 
 # 2. Download Linaro Debian-based Rootfs image
